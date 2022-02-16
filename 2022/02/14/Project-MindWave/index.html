@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://raw.githubusercontent.com/SplashCrBy/imageRepo/main/img/pp.jpg?token=AHXR4IT4DNLFOXYIJEQE6ZDCBOA6W">
-  <link rel="icon" href="https://raw.githubusercontent.com/SplashCrBy/imageRepo/main/img/pp.jpg?token=AHXR4IT4DNLFOXYIJEQE6ZDCBOA6W">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://i.imgur.com/h9PrMaJ.jpg">
+  <link rel="icon" href="https://i.imgur.com/h9PrMaJ.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -18,18 +18,30 @@
   <meta name="author" content="Sizhao Li">
   <meta name="keywords" content="sizhao, website, connorli, sizhaoli">
   
-    <meta name="description" content="Is art making a mysterious process which requires extensive training and inspiration? My answer is no. People innately have the ability to create things on their own thought. The goal of this installa">
+    <meta name="description" content="Is art making a mysterious process which requires extensive training and inspiration? My answer is no. People innately have the ability to create things on their own thought.  The goal of this install">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Project MindWave">
 <meta property="og:url" content="https://bylsz.me/2022/02/14/Project-MindWave/index.html">
 <meta property="og:site_name" content="Sizhao">
-<meta property="og:description" content="Is art making a mysterious process which requires extensive training and inspiration? My answer is no. People innately have the ability to create things on their own thought. The goal of this installa">
+<meta property="og:description" content="Is art making a mysterious process which requires extensive training and inspiration? My answer is no. People innately have the ability to create things on their own thought.  The goal of this install">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.imgur.com/ChaLDAe.png">
+<meta property="og:image" content="https://i.imgur.com/E0ABFlV.jpg">
+<meta property="og:image" content="https://i.imgur.com/XS6fFye.jpg">
+<meta property="og:image" content="https://i.imgur.com/jiGi1fO.png">
+<meta property="og:image" content="https://i.imgur.com/UuxYf56.png">
+<meta property="og:image" content="https://i.imgur.com/Won5r14.png">
+<meta property="og:image" content="https://i.imgur.com/ZmZSbbG.png">
+<meta property="og:image" content="https://i.imgur.com/JM2zBfn.png">
 <meta property="article:published_time" content="2022-02-14T23:34:38.000Z">
-<meta property="article:modified_time" content="2022-02-15T08:18:16.401Z">
+<meta property="article:modified_time" content="2022-02-16T00:30:00.581Z">
 <meta property="article:author" content="Sizhao Li">
-<meta property="article:tag" content="project">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="EEG">
+<meta property="article:tag" content="Human Computer Interface">
+<meta property="article:tag" content="Processing">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://i.imgur.com/ChaLDAe.png">
   
   
   <title>Project MindWave - Sizhao</title>
@@ -241,21 +253,33 @@
             
             <div class="markdown-body">
               <p><em>Is art making a mysterious process which requires extensive training and inspiration? My answer is no. People innately have the ability to create things on their own thought.</em></p>
+<p><img src="https://i.imgur.com/ChaLDAe.png" srcset="/img/loading.gif" lazyload></p>
 <p>The goal of this installation is to make the art-making process simpler so that everyone can participate in creating their own art pieces. My idea is triggered by the “disenchantment” brought up by Max Weber. Specifically, the term emphasizes the ability of human beings and reduces the importance of mysterious power including god, karma. Therefore, a key element in my project is players’ bodies because they are the embodied representation of their inner thought, in other words, brainwaves. As a consequence, the brain computer interface naturally comes into my mind as it can accurately reflect the fluctuation of people’s mind. I finally decide to use EEG instead of FMRI and MEG because it has better temporal resolution and its portability is compatible with the needs of installation art. Nevertheless, how to transform the brainwave into tangible elements that can be appreciated by the audiences? After a period of research, I find that they combine both music and visual stuff to reflect the change of their mind status. The <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=IctphI0mTHI">MIDI distortion with EEG</a> and the <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=1sXL3SAELoc">magical wall</a> are good references while they lack of either the participation of interactive elements or spontaneous creation in their projects.</p>
-<p>Consequently, I then determine to add an interactive part into my project to make the process much more engaging. The form I take is a rhythm game because it can integrate both music and visual elements well. Since the EEG requires extensive training to allow audience to produce the exact note as their imagination (the computer will play C1 if audiences think C1 in their mind), my first approach is to generate notes based on the variation of brainwave, but the demo showed in final presentation already proves that this way does not match the primary expectation. Hence, adding sound effect on a completed music piece should be an ideal substitution because the whole gaming process is much more consistent and melodious. Furthermore, external input should be given to audiences instead of letting them use keyboard because it is more intuitive and interesting to play as a real DJ and real DJ does not spin discs with keyboards. In the example of <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=JvIRIUHJfp0">PERISCOPISTA</a> we could see that audiences are able to use body gestures and voice to interact, which became an inspiration of my approach. Visual elements are also important in this project because they are the visualization of the music and trigger audience to explore more on this project (to try different visual effects).</p>
-<p>During implementation stage, since most of the work relate to coding, it spends me a lot of time on realizing the game since I never program a rhythm game before, so I search the document of Processing to see what I can do with it. After the game is playable, I take another 2 hours to determine the algorithm that differentiates the EEG signals as far as possible since the readings are really close. In short, I use the remainder of a series computation to determine their (notes) directions. The connection quality of EEG headset is also unstable so that I specific a web socket for it and it then works well. But for now, the focus is moved to sound aspects, so it may take me several times to figure out how to realize sound alternation in Processing. I also Makey-Makey instead of Arduino because the former is much easier to use. Thus, the further criteria of my project are to measure if the mixing sound effect is harmonious considering the visual performance and whether the external controller is attractive and related to the theme of music remixing. To put it in another way, using instrument-like controller is expected in the future implementation.</p>
-<p>The thing totally has three different phases, red, yellow and green, which reflects different mental status from high to low. The signals read by processing will then trigger midi notes in ableton that help audiences to determine their mental status. Furthermore, they are able to create their own music in this way because of the high variety of brainwaves. Users are also allowed to use keyboard to control the sound output as a type of remix.  </p>
+<p><img src="https://i.imgur.com/E0ABFlV.jpg" srcset="/img/loading.gif" lazyload><img src="https://i.imgur.com/XS6fFye.jpg" srcset="/img/loading.gif" lazyload><br>Consequently, I then determine to add an interactive part into my project to make the process much more engaging. The form I take is a rhythm game because it can integrate both music and visual elements well. Since the EEG requires extensive training to allow audience to produce the exact note as their imagination (the computer will play C1 if audiences think C1 in their mind), my first approach is to generate notes based on the variation of brainwave, but the demo showed in final presentation already proves that this way does not match the primary expectation. Hence, adding sound effect on a completed music piece should be an ideal substitution because the whole gaming process is much more consistent and melodious. Furthermore, external input should be given to audiences instead of letting them use keyboard because it is more intuitive and interesting to play as a real DJ and real DJ does not spin discs with keyboards. In the example of <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=JvIRIUHJfp0">PERISCOPISTA</a> we could see that audiences are able to use body gestures and voice to interact, which became an inspiration of my approach. Visual elements are also important in this project because they are the visualization of the music and trigger audience to explore more on this project (to try different visual effects).<br><img src="https://i.imgur.com/jiGi1fO.png" srcset="/img/loading.gif" lazyload><br>During implementation stage, since most of the work relate to coding, it spends me a lot of time on realizing the game since I never program a rhythm game before, so I search the document of Processing to see what I can do with it. After the game is playable, I take another 2 hours to determine the algorithm that differentiates the EEG signals as far as possible since the readings are really close. In short, I use the remainder of a series computation to determine their (notes) directions. The connection quality of EEG headset is also unstable so that I specific a web socket for it and it then works well. But for now, the focus is moved to sound aspects, so it may take me several times to figure out how to realize sound alternation in Processing. I also Makey-Makey instead of Arduino because the former is much easier to use. Thus, the further criteria of my project are to measure if the mixing sound effect is harmonious considering the visual performance and whether the external controller is attractive and related to the theme of music remixing. To put it in another way, using instrument-like controller is expected in the future implementation.<br><img src="https://i.imgur.com/UuxYf56.png" srcset="/img/loading.gif" lazyload><br>The thing totally has three different phases, red, yellow and green, which reflects different mental status from high to low. The signals read by processing will then trigger midi notes in ableton that help audiences to determine their mental status. Furthermore, they are able to create their own music in this way because of the high variety of brainwaves. Users are also allowed to use keyboard to control the sound output as a type of remix.<br><img src="https://i.imgur.com/Won5r14.png" srcset="/img/loading.gif" lazyload><br><img src="https://i.imgur.com/ZmZSbbG.png" srcset="/img/loading.gif" lazyload><br><img src="https://i.imgur.com/JM2zBfn.png" srcset="/img/loading.gif" lazyload></p>
 
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/project/">project</a>
+                    
+                  </div>
+                
                 
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/project/">project</a>
+                      <a class="hover-with-bg" href="/tags/python/">python</a>
+                    
+                      <a class="hover-with-bg" href="/tags/EEG/">EEG</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Human-Computer-Interface/">Human Computer Interface</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Processing/">Processing</a>
                     
                   </div>
                 
@@ -263,7 +287,7 @@
               
                 <p class="note note-warning">
                   
-                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                    <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" srcset="/img/loading.gif" lazyload /></a><br />This work is licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
                   
                 </p>
               
@@ -281,12 +305,6 @@
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2022/02/13/hello-world/">
-                        <span class="hidden-mobile">Hello World</span>
-                        <span class="visible-mobile">Next</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
